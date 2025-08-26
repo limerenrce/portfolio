@@ -10,7 +10,7 @@ export default function Hero() {
     <>
       <section>
         {/* PAGE TITLE */}
-        <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-8">
+        <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-12">
           <div className="col-span-3 text-left">
             <h1 className="text-4xl capitalize font-bold mb-4 w-[300]">
               Junior Website Developer
@@ -19,7 +19,7 @@ export default function Hero() {
           <div className="col-span-1>">
             <Link
               className="lg:flex items-center gap-3 py-2 px-2 w-30 mt-10 ml-43 text-blue-500"
-              href="#contact"
+              href="/contact"
             >
               Contact{" "}
               <Image
@@ -56,20 +56,24 @@ export default function Hero() {
             </div>
           </div>
 
+          
           <div className="row-span-3 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">
+            <Link href="/about">
             <p className="text-2xl text-left capitalize font-normal mb-4">
               Your ultimate website developer.
             </p>
+            <p>
+              Hi, I’m Satya Uttami 👋 A passionate Information Systems student (GPA 3.93) who builds production-ready web & mobile apps with React, Flutter, and Flask. I thrive at the intersection of design and development, turning ideas into scalable solutions. My goal? To bring impact through clean code, intuitive design, and strong teamwork.
+            </p>
+          </Link>
           </div>
-          <div className="row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4"></div>
-          <div className="row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4"></div>
+
+          <div className="row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">
+          <Link href="/project"><p>projects</p></Link></div>
+          <div className="row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4"><Link href="/experience"><p>Experience</p></Link></div>
         </div>
 
-        <p className="text-[16px] w-[500]">
-          My name is Ni Wayan Putri Satya Uttami an Undergraduate of Information
-          Systems @ Universitas Pendidikan Ganesha. My role is a Junior Web
-          Developer. I am BNSP Certified.
-        </p>
+        
 
         {/* <div className="grid auto-rows-[150px] grid-cols-4 gap-6">
           <div className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">A</div>

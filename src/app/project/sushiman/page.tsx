@@ -1,13 +1,18 @@
+import Breadcrumb from "@/components/breadcrumb";
 import React from "react";
 
-export default function Work() {
+export default function Sushiman() {
   return (
     <>
       <section>
+        {/* Breadcrumbs */}
+        <Breadcrumb/>
+
+        {/* PAGE TITLE */}
         <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-8">
           <div className="col-span-3 text-left">
             <h1 className="text-4xl capitalize font-bold mb-4 w-[300]">
-              My Works
+              Sushi Man{" "}
             </h1>
           </div>
           <div className="col-span-1>">
@@ -20,6 +25,12 @@ export default function Work() {
             </Link> */}
           </div>
         </div>
+
+        {/* PAGE CONTENT */}
+           <div className="mt-10 grid auto-rows grid-cols-6 gap-6">
+              <div className="col-span-6 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">
+              <div className="h-screen"></div></div>
+            </div>
       </section>
     </>
   );

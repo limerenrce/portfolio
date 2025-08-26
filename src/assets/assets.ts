@@ -36,8 +36,14 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import project from './project.jpeg';
+import sushiman_tb from './sushiman_tb.png';
+import selingan_tb from './selingan_tb.png';
 
 export const assets = {
+    sushiman_tb,
+    selingan_tb,
+    project,
     user_me,
     user_image,
     code_icon,

@@ -1,14 +1,17 @@
+import Breadcrumb from "@/components/breadcrumb";
+
 export default async function Page() {
   const response = await fetch("https://dummyjson.com/posts");
   const data = await response.json();
   return (
     <>
     <section>
+      <Breadcrumb/>
 
-      <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-8">
+      <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-5">
           <div className="col-span-3 text-left">
             <h1 className="text-4xl capitalize font-bold mb-4 w-[300]">
-              About Me
+              Blog
             </h1>
           </div>
           <div className="col-span-1>">
@@ -22,7 +25,9 @@ export default async function Page() {
           </div>
         </div>
 
-      <div className="text-left">
+   <div className="mt-10 grid auto-rows grid-cols-6 gap-6">
+          <div className="col-span-6 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">
+          <div className="text-left">
         
         <ul>
         {data.posts.map((post: { id: number; title: string }) => (
@@ -37,6 +42,9 @@ export default async function Page() {
         ))}
       </ul>
         </div>
+        </div> 
+        </div>
+      
     </section>
    
     </>
