@@ -18,7 +18,18 @@ export default function Hero() {
           </div>
           <div className="col-span-1>">
             <Link
-              className="lg:flex items-center gap-3 py-2 px-2 w-30 mt-10 ml-43 text-blue-500"
+              className="lg:flex items-center gap-3 py-2 px-2 w-35 ml-33 text-blue-500"
+              href="/contact"
+            >
+              Download CV{" "}
+              <Image
+                src={assets.right_arrow_bold}
+                alt="contact"
+                className="w-3"
+              />
+            </Link>
+            <Link
+              className="lg:flex items-center gap-3 py-2 px-2 w-30 ml-43 text-blue-500"
               href="/contact"
             >
               Contact{" "}
@@ -34,58 +45,73 @@ export default function Hero() {
         {/* BENTO BOX MENU */}
         <div className="mt-10 grid auto-rows-[100px] grid-cols-6 gap-6">
           <div className="row-span-3 col-span-3 grid grid-cols-2 gap-6">
-            <div className="row-span-1 col-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">
-              <p className="text-7xl text-center capitalize font-normal">
-                100
-              </p>
-            </div>
-            <div className="row-span-1 col-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">
-              <p className="text-2xl text-center capitalize font-bold mb-4">
-                100
-              </p>
-            </div>
-            <div className="row-span-1 col-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">
-              <p className="text-2xl text-center capitalize font-bold mb-4">
-                100
-              </p>
-            </div>
-            <div className="row-span-1 col-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">
-              <p className="text-2xl text-center capitalize font-bold mb-4">
-                100
-              </p>
-            </div>
+            <div className="row-span-1 col-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4"></div>
+            <div className="row-span-1 col-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4"></div>
+            <div className="row-span-1 col-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4"></div>
+            <div className="row-span-1 col-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4"></div>
           </div>
 
-          
-          <div className="row-span-3 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">
-            <Link href="/about">
-            <p className="text-2xl text-left capitalize font-normal mb-4">
-              Your ultimate website developer.
-            </p>
-            <p>
-              Hi, I’m Satya Uttami 👋 A passionate Information Systems student (GPA 3.93) who builds production-ready web & mobile apps with React, Flutter, and Flask. I thrive at the intersection of design and development, turning ideas into scalable solutions. My goal? To bring impact through clean code, intuitive design, and strong teamwork.
-            </p>
-          </Link>
+          <div className="row-span-3 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
+            <Link href="/about" className="transition group">
+              <div className="p-6 flex justify-between items-start">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    Your ultimate website developer.
+                  </h3>
+                  <p className="text-gray-500">
+                    Hi, I’m Satya Uttami 👋 A passionate Information Systems
+                    student (GPA 3.93) who builds production-ready web & mobile
+                    apps with React, Flutter, and Flask. I thrive at the
+                    intersection of design and development, turning ideas into
+                    scalable solutions. My goal? To bring impact through clean
+                    code, intuitive design, and strong teamwork.{" "}
+                  </p>
+                </div>
+                 <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
+                  →
+                </p>
+              </div>
+            </Link>
           </div>
 
-          <div className="row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">
-          <Link href="/project"><p>projects</p></Link></div>
-          <div className="row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4"><Link href="/experience"><p>Experience</p></Link></div>
+          <div className="relative overflow-hidden row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
+            <Link href="/project" className="transition group">
+             <div className="p-6 flex justify-between items-start">
+                            <div>
+                              <h3 className="text-2xl font-bold text-gray-900">
+                                RECENT PROJECT
+                              </h3>
+                              <p className="text-gray-500">See all</p>
+                            </div>
+                            <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
+                              →
+                            </p>
+                          </div>
+                          <Image
+                            src={assets.sushiman_tb}
+                            alt="Sushiman Preview"
+                            width={520}
+                            height={520}
+                            className="shadow-lg shadow-gray-500 group-hover:shadow-sm border-7 border-white rounded-xl rotate-1 ml-3 mt-13 transform transition duration-300 group-hover:rotate-2 group-hover:-translate-y-15"
+                          />
+            </Link>
+          </div>
+          <div className="row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
+            <Link href="/experience">{/* <p>Experience</p> */}</Link>
+          </div>
         </div>
 
-        
-
         {/* <div className="grid auto-rows-[150px] grid-cols-4 gap-6">
-          <div className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">A</div>
+          <div className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">A</div>
           <div className="row-span-3 col-span-2 grid grid-cols-2 gap-6">
-            <div className="row-span-1 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">B</div>
-            <div className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">C</div>
-            <div className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">D</div>
+            <div className="row-span-1 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">B</div>
+            <div className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">C</div>
+            <div className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">D</div>
           </div>
-          <div className="row-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">E</div>
-          <div className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">F</div>
-          <div className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">G</div>
-          <div className="row-span-1 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">H</div>
+          <div className="row-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">E</div>
+          <div className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">F</div>
+          <div className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">G</div>
+          <div className="row-span-1 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">H</div>
         </div> */}
       </section>
       {/* <section className="mt-10 flex flex-col md:flex-row items-center justify-center gap-10 max-md:px-4">

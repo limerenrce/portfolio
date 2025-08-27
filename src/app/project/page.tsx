@@ -9,8 +9,8 @@ export default function Work() {
     <>
       <section>
         {/* Breadcrumbs */}
-        <Breadcrumb/>
-        
+        <Breadcrumb />
+
         {/* PAGE TITLE */}
         <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-5">
           <div className="col-span-3 text-left">
@@ -20,7 +20,7 @@ export default function Work() {
           </div>
           <div className="col-span-1>">
             {/* <Link
-              className="lg:flex items-center gap-3 py-2 px-2 w-30 mt-10 ml-43 rounded-full border-2 border-slate-400/10 bg-base-grey bg-white"
+              className="lg:flex items-center gap-3 py-2 px-2 w-30 mt-10 ml-43 rounded-full border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5]"
               href="#contact"
             >
               Contact{" "}
@@ -29,141 +29,144 @@ export default function Work() {
           </div>
         </div>
 
-
         {/* PAGE CONTENT */}
-        <div className="mt-10 grid auto-rows-[100px] grid-cols-6 gap-6">
-          <div className="row-span-3 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white">
-            <Link href="/project/selingan">
-              <Image
-                className="rounded-xl h-full object-cover"
-                src={assets.selingan_tb}
-                alt="card-image"
-              />
-            </Link>
-          </div>
-          <div className="row-span-3 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white">
-            <Link href="/project/sushiman">
-              <Image
-                className="rounded-xl h-full object-cover"
-                src={assets.sushiman_tb}
-                alt="card-image"
-              />
-            </Link>
-          </div>
-          <div className="row-span-3 col-span-3 rounded-xl border bg-white border-slate-200 shadow-slate-950/5 shadow-sm overflow-hidden">
-            <div className="flex">
-              <div className="col-span-1 w-2/5">
-                <Image
-                  className="object-cover"
-                  src={assets.project}
-                  alt="card-image"
-                />
-              </div>
-              <div className="col-span-2">
-                <div className="p-4">
-                  <small className="font-sans antialiased text-sm mb-4 font-bold uppercase text-slate-600">
-                    webdev
-                  </small>
-                  <h5 className="font-sans antialiased font-bold text-lg md:text-xl lg:text-2xl text-current mb-2">
-                    Selingan
-                  </h5>
-                  <p className="font-sans antialiased text-base mb-8 text-slate-600">
-                    Like so many organizations these days, A
-                  </p>
-                  <a
-                    className="border font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed text-sm rounded-md py-2 px-4 shadow-sm hover:shadow-md bg-slate-800 border-slate-800 text-slate-50 hover:bg-slate-700 hover:border-slate-700 mb-2 flex w-fit items-center gap-2"
-                    href="#"
-                  >
-                    Learn More
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      className="h-4 w-4"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row-span-3 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey">
-            <Image
-              className="rounded-xl h-full object-cover"
-              src={assets.project}
-              alt="card-image"
-            />
+
+        <div className="mt-10 grid auto-rows-[90px] grid-cols-5 gap-6">
+          {/* SELINGAN */}
+
+          <div className="relative overflow-hidden row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5]">
             <Link
-              className="z-100 border font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed text-sm rounded-md py-2 px-4 shadow-sm hover:shadow-md bg-slate-800 border-slate-800 text-slate-50 hover:bg-slate-700 hover:border-slate-700 mb-2 flex w-fit items-center gap-2"
-              href="#"
+              href="/project/selingan"
+              className="overflow-hidden transition group"
             >
-              Learn More
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-                className="h-4 w-4"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                ></path>
-              </svg>
+              <div className="p-6 flex justify-between items-start">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">SELINGAN</h3>
+                  <p className="text-gray-500">
+                    Brand & product refresh, Web design
+                  </p>
+                </div>
+                <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
+                  →
+                </p>
+              </div>
+              <Image
+                src={assets.selingan_tb}
+                alt="Selingan Preview"
+                width={660}
+                className="shadow-lg shadow-gray-500 group-hover:shadow-sm border-7 border-white rounded-xl rotate-1 ml-5 mt-6 transform transition duration-300 group-hover:rotate-2 group-hover:-translate-y-8"
+              />
             </Link>
           </div>
-        </div>
-        
-        <div className="mt-10">
-          <div className="rounded-lg border shadow-sm overflow-hidden bg-white border-slate-200 shadow-slate-950/5 flex h-full w-full max-w-[48rem] flex-row">
-            <Image
-              className="w-2/5 object-cover"
-              src={assets.project}
-              alt="card-image"
-            />
-            <div className="w-full h-max rounded p-4">
-              <small className="font-sans antialiased text-sm mb-4 font-bold uppercase text-slate-600">
-                startups
-              </small>
-              <h5 className="font-sans antialiased font-bold text-lg md:text-xl lg:text-2xl text-current mb-2">
-                Lyft launching cross-platform service this week
-              </h5>
-              <p className="font-sans antialiased text-base mb-8 text-slate-600">
-                Like so many organizations these days, Autodesk is a company in
-                transition. It was until recently a traditional boxed software
-                company selling licenses. Yet its own business model disruption
-                is only part of the story
-              </p>
-              <a
-                className="border font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed text-sm rounded-md py-2 px-4 shadow-sm hover:shadow-md bg-slate-800 border-slate-800 text-slate-50 hover:bg-slate-700 hover:border-slate-700 mb-2 flex w-fit items-center gap-2"
-                href="#"
-              >
-                Learn More
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  className="h-4 w-4"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                  ></path>
-                </svg>
-              </a>
-            </div>
+
+          {/* SUHSI MAN */}
+
+          <div className="relative overflow-hidden row-span-5 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5]">
+            <Link
+              href="/project/sushiman"
+              className="overflow-hidden transition group"
+            >
+              <div className="p-6 flex justify-between items-start">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    SUSHI MAN
+                  </h3>
+                  <p className="text-gray-500">Branding, Illustrations</p>
+                </div>
+                <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
+                  →
+                </p>
+              </div>
+              <Image
+                src={assets.sushiman_tb}
+                alt="Sushiman Preview"
+                width={420}
+                height={420}
+                className="shadow-lg shadow-gray-500 group-hover:shadow-sm border-7 border-white rounded-xl -rotate-1 ml-5 mt-10 transform transition duration-300 group-hover:-rotate-2 group-hover:-translate-y-8"
+              />
+            </Link>
+          </div>
+
+          {/* APRIORI */}
+
+          <div className="relative overflow-hidden row-span-5 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5]">
+            <Link
+              href="/project/apriori"
+              className="overflow-hidden transition group"
+            >
+              <div className="p-6 flex justify-between items-start">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    APRIORI
+                  </h3>
+                  <p className="text-gray-500">Market basket analysis</p>
+                </div>
+                <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
+                  →
+                </p>
+              </div>
+              <Image
+                src={assets.marketbasket_tb}
+                alt="Sushiman Preview"
+                width={420}
+                height={420}
+                className="shadow-lg shadow-gray-500 group-hover:shadow-sm border-7 border-white rounded-xl rotate-1 ml-5 mt-10 transform transition duration-300 group-hover:rotate-2 group-hover:-translate-y-8"
+              />
+            </Link>
+          </div>
+
+          {/* ALBERT */}
+
+          <div className="relative overflow-hidden row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5]">
+            <Link
+              href="/project/albert"
+              className="overflow-hidden transition group"
+            >
+              <div className="p-6 flex justify-between items-start">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">ALBERT</h3>
+                  <p className="text-gray-500">
+                    Hospital Review, Sentiment Analysis
+                  </p>
+                </div>
+                <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
+                  →
+                </p>
+              </div>
+              <Image
+                src={assets.pj_ab_1}
+                alt="ALBERT Preview"
+                width={660}
+                className="shadow-lg shadow-gray-500 group-hover:shadow-sm border-7 border-white rounded-xl -rotate-1 ml-5 mt-6 transform transition duration-300 group-hover:-rotate-2 group-hover:-translate-y-8"
+              />
+            </Link>
+          </div>
+
+          {/* ISSA */}
+
+          <div className="relative overflow-hidden row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5]">
+            <Link
+              href="/project/issa"
+              className="overflow-hidden transition group"
+            >
+              <div className="p-6 flex justify-between items-start">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">ISSA</h3>
+                  <p className="text-gray-500">
+                    Student Achievement Web
+                  </p>
+                </div>
+                <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
+                  →
+                </p>
+              </div>
+              <Image
+                src={assets.project}
+                alt="Sushiman Preview"
+                width={660}
+                className="shadow-lg shadow-gray-500 group-hover:shadow-sm border-7 border-white rounded-xl rotate-1 ml-5 mt-6 transform transition duration-300 group-hover:rotate-2 group-hover:-translate-y-8"
+              />
+            </Link>
           </div>
         </div>
       </section>

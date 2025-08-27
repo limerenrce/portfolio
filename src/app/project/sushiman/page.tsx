@@ -1,4 +1,6 @@
+import { assets } from "@/assets/assets";
 import Breadcrumb from "@/components/breadcrumb";
+import Image from "next/image";
 import React from "react";
 
 export default function Sushiman() {
@@ -6,31 +8,69 @@ export default function Sushiman() {
     <>
       <section>
         {/* Breadcrumbs */}
-        <Breadcrumb/>
+        <Breadcrumb />
 
         {/* PAGE TITLE */}
-        <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-8">
-          <div className="col-span-3 text-left">
-            <h1 className="text-4xl capitalize font-bold mb-4 w-[300]">
-              Sushi Man{" "}
-            </h1>
-          </div>
-          <div className="col-span-1>">
-            {/* <Link
-              className="lg:flex items-center gap-3 py-2 px-2 w-30 mt-10 ml-43 rounded-full border-2 border-slate-400/10 bg-base-grey bg-white"
-              href="#contact"
-            >
-              Contact{" "}
-              <Image src={assets.arrow_icon} alt="contact" className="w-3" />
-            </Link> */}
+        <div className="pt-8 flex justify-between items-start">
+          <div>
+            <h3 className="text-4xl font-bold text-gray-900">SUSHI MAN</h3>
+            <p className="text-gray-500 mt-4 w-200">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              semper lectus vitae augue suscipit elementum. Vivamus non purus id
+              erat pulvinar vestibulum nec in arcu. Mauris ac egestas elit. Cras
+              nec cursus arcu. Praesent egestas risus nulla, vitae egestas ipsum
+              suscipit sagittis. Ut a tellus tristique, euismod justo in,
+              euismod quam. Sed pellentesque dignissim lacus a viverra. Mauris
+              tristique cursus urna, at commodo purus auctor eu. Ut vestibulum
+              efficitur finibus. Cras ornare lorem ut eleifend consequat.
+              Quisque eros nunc, laoreet at sapien vitae, interdum euismod
+              sapien.
+            </p>
+            <div className="flex gap-3 text-gray-500 mt-3 h-[100px]">
+              <p>Branding</p>
+              <p>Illustrations</p>
+            </div>
           </div>
         </div>
 
         {/* PAGE CONTENT */}
-           <div className="mt-10 grid auto-rows grid-cols-6 gap-6">
-              <div className="col-span-6 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">
-              <div className="h-screen"></div></div>
-            </div>
+        <div className="mt-10 grid auto-rows grid-cols-6 gap-6">
+          <div className="col-span-6">
+            <Image
+            src={assets.pj_sm_4}
+            alt="Project Mobile App Sushi Man"
+            className="w-full rounded-lg"
+            />
+          </div>
+          <div className="col-span-6">
+            <Image
+            src={assets.pj_sm_5}
+            alt="Project Mobile App Sushi Man"
+            className="w-full rounded-lg"
+            />
+          </div>
+          <div className="col-span-3">
+            <Image
+            src={assets.pj_sm_3}
+            alt="Project Mobile App Sushi Man"
+            className="w-full rounded-lg"
+            />
+          </div>
+          <div className="col-span-3">
+            <Image
+            src={assets.pj_sm_1}
+            alt="Project Mobile App Sushi Man"
+            className="w-full rounded-lg"
+            />
+          </div>
+          <div className="col-span-6">
+            <Image
+            src={assets.pj_sm_2}
+            alt="Project Mobile App Sushi Man"
+            className="w-full rounded-lg"
+            />
+          </div>
+        </div>
       </section>
     </>
   );

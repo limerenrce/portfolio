@@ -9,8 +9,8 @@ export default function Contact() {
     
             <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-5">
               <div className="col-span-3 text-left">
-                <h1 className="text-4xl capitalize font-bold mb-4 w-[300]">
-                  Contact
+                <h1 className="text-4xl capitalize font-bold mb-4 w-[500]">
+                  Let’s build something impactful together.
                 </h1>
               </div>
               <div className="col-span-1>">
@@ -19,13 +19,13 @@ export default function Contact() {
                       href="#contact"
                     >
                       Contact{" "}
-                      <Image src={assets.arrow_icon} alt="contact" className="w-3" />
+                    <Image src={assets.arrow_icon} alt="contact" className="w-3" />
                     </Link> */}
               </div>
             </div>
     
             <div className="mt-10 grid auto-rows grid-cols-6 gap-6">
-              <div className="col-span-6 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">
+              <div className="col-span-6 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
               <div className="h-screen"></div></div>
             </div>
           </section>

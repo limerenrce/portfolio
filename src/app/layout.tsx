@@ -28,14 +28,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.className} ${geistMono.variable} antialiased bg-zinc-200`}
+        className={`${geistSans.className} ${geistMono.variable} antialiased bg-[#FFFFFF]`}
       >
         <div className="flex h-screen">
           {/* Sidebar */}
           <Sidebar />
 
           {/* Main content */}
-          <main className="flex-1 ml-64 overflow-y-auto p-8 bg-gray-100">
+          <main className="flex-1 ml-64 overflow-y p-8 bg-[#FFFFFF]">
              {children}
              <Footer/>
           </main>

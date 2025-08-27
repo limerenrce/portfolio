@@ -26,7 +26,7 @@ export default async function Page() {
         </div>
 
    <div className="mt-10 grid auto-rows grid-cols-6 gap-6">
-          <div className="col-span-6 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-white p-4">
+          <div className="col-span-6 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
           <div className="text-left">
         
         <ul>

@@ -39,10 +39,38 @@ import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import project from './project.jpeg';
 import sushiman_tb from './sushiman_tb.png';
 import selingan_tb from './selingan_tb.png';
+import marketbasket_tb from './marketbasket_tb.png';
+import pj_sm_1 from './pj_sm_1.png';
+import pj_sm_2 from './pj_sm_2.png';
+import pj_sm_3 from './pj_sm_3.png';
+import pj_sm_4 from './pj_sm_4.png';
+import pj_sm_5 from './pj_sm_5.png';
+import pj_sl_1 from './pj_sl_1.png';
+import pj_sl_2 from './pj_sl_2.png';
+import pj_sl_3 from './pj_sl_3.png';
+import pj_mb_1 from './pj_mb_1.png';
+import pj_mb_2 from './pj_mb_2.png';
+import pj_ab_1 from './pj_ab_1.png';
+import about_gif from './about.gif';
+import skill_gif from './skill.gif';
 
 export const assets = {
+    skill_gif,
+    about_gif,
+    pj_ab_1,
+    pj_mb_1,
+    pj_mb_2,
+    pj_sl_1,
+    pj_sl_2,
+    pj_sl_3,
+    pj_sm_1,
+    pj_sm_2,
+    pj_sm_3,
+    pj_sm_4,
+    pj_sm_5,
     sushiman_tb,
     selingan_tb,
+    marketbasket_tb,
     project,
     user_me,
     user_image,
