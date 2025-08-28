@@ -2,6 +2,7 @@ import { assets } from "@/assets/assets";
 import Breadcrumb from "@/components/breadcrumb";
 import Image from "next/image";
 import React from "react";
+import Contact from "../contact/page";
 
 export default function About() {
   return (
@@ -31,17 +32,15 @@ export default function About() {
             <div className="p-6 flex justify-between items-start">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900">
-                  Active-Passive
+                  Your ultimate website developer.
                 </h3>
                 <p className="text-gray-500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vel fringilla velit. Cras ut arcu ut dui scelerisque
-                  scelerisque. Integer non lectus viverra, vehicula metus vel,
-                  condimentum nunc. Suspendisse imperdiet, leo et facilisis
-                  euismod, eros risus placerat sapien, eu bibendum lorem nisl et
-                  ligula. Mauris sit amet laoreet mi. Pellentesque justo sem,
-                  vestibulum efficitur elementum dignissim, blandit et justo. Ut
-                  ut lacus pulvinar sem semper finibus at sagittis massa.{" "}
+                  Hi, I’m Satya Uttami 👋 A passionate Information Systems
+                  student (GPA 3.93) who builds production-ready web & mobile
+                  apps with React, Flutter, and Flask. I thrive at the
+                  intersection of design and development, turning ideas into
+                  scalable solutions. My goal? To bring impact through clean
+                  code, intuitive design, and strong teamwork.{" "}
                 </p>
               </div>
             </div>
@@ -59,30 +58,20 @@ export default function About() {
         <div className="mt-8 overflow-hidden p-4">
           <div className="marquee-content flex gap-4 items-center animate-marquee">
             <div className="px-4 py-2 w-full">
-              <Image
-              src={assets.firebase}
-              alt="firebase"/>
+              <Image src={assets.firebase} alt="firebase" />
             </div>
             <div className="px-4 py-2 w-full">
-              <Image
-              src={assets.figma}
-              alt="firebase"/>
+              <Image src={assets.figma} alt="firebase" />
             </div>
             <div className="px-4 py-2 w-full">
-              <Image
-              src={assets.git}
-              alt="firebase"/>
+              <Image src={assets.git} alt="firebase" />
             </div>
             <div className="px-4 py-2 w-full">
-              <Image
-              src={assets.mongodb}
-              alt="firebase"/>
+              <Image src={assets.mongodb} alt="firebase" />
             </div>
             <div className="px-4 py-2 w-full">
-              <Image
-              src={assets.vscode}
-              alt="firebase"/>
-            </div> 
+              <Image src={assets.vscode} alt="firebase" />
+            </div>
           </div>
         </div>
 
@@ -105,21 +94,19 @@ export default function About() {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                   vel fringilla velit. Cras ut arcu ut dui scelerisque
                   scelerisque. Integer non lectus viverra, vehicula metus vel,
-                  condimentum nunc. {" "}
+                  condimentum nunc.{" "}
                 </p>
               </div>
             </div>
           </div>
 
-
           <div className="row-span-2 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
             <div className="p-6 flex justify-between items-start">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                 Velma
-                </h3>
+                <h3 className="text-2xl font-bold text-gray-900">Velma</h3>
                 <p className="text-gray-500">
-                 As a Learning Developer Lead, I designed programs with 90%+ satisfaction. {" "}
+                  As a Learning Developer Lead, I designed programs with 90%+
+                  satisfaction.{" "}
                 </p>
               </div>
             </div>
@@ -127,11 +114,10 @@ export default function About() {
           <div className="row-span-2 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
             <div className="p-6 flex justify-between items-start">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  Sakapuan
-                </h3>
+                <h3 className="text-2xl font-bold text-gray-900">Sakapuan</h3>
                 <p className="text-gray-500">
-                  As a R&D Manager, I led data strategies for content engagement. {" "}
+                  As a R&D Manager, I led data strategies for content
+                  engagement.{" "}
                 </p>
               </div>
             </div>
@@ -143,15 +129,22 @@ export default function About() {
                   Achievements & Publications
                 </h3>
                 <p className="text-gray-500">
-                  (mini section at bottom) → medals, competition results, copyrighted works.{" "}
+                  (mini section at bottom) → medals, competition results,
+                  copyrighted works.{" "}
                 </p>
-              </div> 
-                <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
-                  →
-                </p> 
+              </div>
+              <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
+                →
+              </p>
             </div>
           </div>
         </div>
+
+        <div className="mt-8" id="contact">
+        <Contact/>
+
+        </div>
+
       </section>
     </>
   );

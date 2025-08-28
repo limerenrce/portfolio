@@ -15,20 +15,16 @@ export default function Albert() {
           <div>
             <h3 className="text-4xl font-bold text-gray-900">ALBERT</h3>
             <p className="text-gray-500 mt-4 w-200">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              semper lectus vitae augue suscipit elementum. Vivamus non purus id
-              erat pulvinar vestibulum nec in arcu. Mauris ac egestas elit. Cras
-              nec cursus arcu. Praesent egestas risus nulla, vitae egestas ipsum
-              suscipit sagittis. Ut a tellus tristique, euismod justo in,
-              euismod quam. Sed pellentesque dignissim lacus a viverra. Mauris
-              tristique cursus urna, at commodo purus auctor eu. Ut vestibulum
-              efficitur finibus. Cras ornare lorem ut eleifend consequat.
-              Quisque eros nunc, laoreet at sapien vitae, interdum euismod
-              sapien.
+              A machine learning system that classifies hospital reviews into positive, neutral, or negative categories to help healthcare providers understand patient experiences.
             </p>
-            <div className="flex gap-3 text-gray-500 mt-3 h-[100px]">
-              <p>Hospital Review</p>
-              <p>Sentiment Analysis</p>
+            <p className="text-gray-500 mt-4 w-200">
+              I trained and optimized a <span className="text-black font-bold">sentiment classification model using ALBERT</span>, improving performance over baseline models. The system was capable of accurately predicting sentiment on unseen hospital reviews and enabled scalable feedback analysis.
+            </p>
+            <div className="flex gap-3 text-white text-sm mt-10">
+              <p className="rounded-xl bg-[#404040] px-2">Sentiment Analysis</p>
+              <p className="rounded-xl bg-[#404040] px-2">Python</p>
+              <p className="rounded-xl bg-[#404040] px-2">ALBERT</p>
+              <p className="rounded-xl bg-[#404040] px-2">Healthcare Data</p> 
             </div>
           </div>
         </div>

@@ -115,18 +115,18 @@ export default function Work() {
             </Link>
           </div>
 
-          {/* ALBERT */}
+          {/* HOKKY */}
 
           <div className="relative overflow-hidden row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5]">
             <Link
-              href="/project/albert"
+              href="/project/hokky"
               className="overflow-hidden transition group"
             >
               <div className="p-6 flex justify-between items-start">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">ALBERT</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">HOKKY</h3>
                   <p className="text-gray-500">
-                    Hospital Review, Sentiment Analysis
+                    Bookeeping System, Interface Design
                   </p>
                 </div>
                 <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
@@ -134,7 +134,7 @@ export default function Work() {
                 </p>
               </div>
               <Image
-                src={assets.pj_ab_1}
+                src={assets.pj_wh_3}
                 alt="ALBERT Preview"
                 width={660}
                 className="shadow-lg shadow-gray-500 group-hover:shadow-sm border-7 border-white rounded-xl -rotate-1 ml-5 mt-6 transform transition duration-300 group-hover:-rotate-2 group-hover:-translate-y-8"
@@ -161,10 +161,36 @@ export default function Work() {
                 </p>
               </div>
               <Image
-                src={assets.project}
-                alt="Sushiman Preview"
+                src={assets.pj_is_1}
+                alt="ISSA Preview"
                 width={660}
                 className="shadow-lg shadow-gray-500 group-hover:shadow-sm border-7 border-white rounded-xl rotate-1 ml-5 mt-6 transform transition duration-300 group-hover:rotate-2 group-hover:-translate-y-8"
+              />
+            </Link>
+          </div>
+
+          <div className="relative overflow-hidden row-span-5 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5]">
+            <Link
+              href="/project/albert"
+              className="overflow-hidden transition group"
+            >
+              <div className="p-6 flex justify-between items-start">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    ALBERT
+                  </h3>
+                  <p className="text-gray-500">Hospital Review, Sentiment Analysis</p>
+                </div>
+                <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
+                  →
+                </p>
+              </div>
+              <Image
+                src={assets.albert_tb}
+                alt="Albert Preview"
+                width={420}
+                height={420}
+                className="shadow-lg shadow-gray-500 group-hover:shadow-sm border-7 border-white rounded-xl -rotate-1 ml-5 mt-10 transform transition duration-300 group-hover:-rotate-2 group-hover:-translate-y-8"
               />
             </Link>
           </div>

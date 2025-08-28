@@ -1,9 +1,8 @@
-// import { assets } from "@/assets/assets";
-// import Image from "next/image";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import BentoGrid from "./bentogrid";
 
 export default function Hero() {
   return (
@@ -18,143 +17,99 @@ export default function Hero() {
           </div>
           <div className="col-span-1>">
             <Link
-              className="lg:flex items-center gap-3 py-2 px-2 w-35 ml-33 text-blue-500"
-              href="/contact"
+              className="lg:flex items-center gap-3  w-50 ml-25 text-blue-500 transition group"
+              href="/resume.pdf"
+              download="resume"
+              target="_blank"
             >
               Download CV{" "}
-              <Image
-                src={assets.right_arrow_bold}
-                alt="contact"
-                className="w-3"
-              />
+              <p className="text-gray-800 hover:text-black text-2xl duration-500 mr-6 group-hover:translate-x-5">
+                →
+              </p>
             </Link>
             <Link
-              className="lg:flex items-center gap-3 py-2 px-2 w-30 ml-43 text-blue-500"
-              href="/contact"
+              className="lg:flex items-center gap-3 py-2 px-2 w-50 ml-33 text-blue-500 transition group"
+              href="/about#contact"
             >
               Contact{" "}
-              <Image
-                src={assets.right_arrow_bold}
-                alt="contact"
-                className="w-3"
-              />
+              <p className="text-gray-800 hover:text-black text-2xl duration-500 mr-6 group-hover:translate-x-5">
+                →
+              </p>
             </Link>
           </div>
         </div>
 
         {/* BENTO BOX MENU */}
         <div className="mt-10 grid auto-rows-[100px] grid-cols-6 gap-6">
-          <div className="row-span-3 col-span-3 grid grid-cols-2 gap-6">
-            <div className="row-span-1 col-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4"></div>
-            <div className="row-span-1 col-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4"></div>
-            <div className="row-span-1 col-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4"></div>
-            <div className="row-span-1 col-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4"></div>
+          <div className="row-span-3 col-span-3 grid grid-cols-2 gap-6 ">
+            <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-br from-yellow-100 to-yellow p-4 flex flex-col items-center justify-center text-center">
+              <h2 className="text-5xl font-bold">100+</h2>
+              <p className="text-sm mt-2">Completed Projects</p>
+            </div>
+            <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-bl from-[#F5F5F5] to-white p-4 flex flex-col items-center justify-center text-center">
+              {" "}
+              <h2 className="text-2xl font-semibold">Webflow Expert</h2>
+            </div>
+            <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-tr from-[#F5F5F5] to-yellow p-4 flex flex-col items-center justify-center text-center">
+              {" "}
+              <h2 className="text-5xl font-bold">6</h2>
+              <p className="text-sm mt-2">Years Experience</p>
+            </div>
+            <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-tl from-yellow-100 to-yellow p-4 flex flex-col items-center justify-center text-center">
+              {" "}
+              <h2 className="text-5xl font-bold">50+</h2>
+              <p className="text-sm mt-2">Satisfied Clients</p>
+            </div>
           </div>
 
-          <div className="row-span-3 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
-            <Link href="/about" className="transition group">
+          <div className="relative overflow-hidden row-span-5 col-span-3 rounded-xl bg-base-grey bg-[#F5F5F5] p-4">
+            <Link href="/project" className="transition group">
               <div className="p-6 flex justify-between items-start">
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900">
-                    Your ultimate website developer.
+                    RECENT PROJECT
                   </h3>
-                  <p className="text-gray-500">
-                    Hi, I’m Satya Uttami 👋 A passionate Information Systems
-                    student (GPA 3.93) who builds production-ready web & mobile
-                    apps with React, Flutter, and Flask. I thrive at the
-                    intersection of design and development, turning ideas into
-                    scalable solutions. My goal? To bring impact through clean
-                    code, intuitive design, and strong teamwork.{" "}
-                  </p>
+                  <p className="text-gray-500">See all</p>
                 </div>
-                 <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
+                <p className="text-gray-800 hover:text-black text-5xl duration-500 mr-6 group-hover:translate-x-5">
                   →
                 </p>
               </div>
-            </Link>
-          </div>
-
-          <div className="relative overflow-hidden row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
-            <Link href="/project" className="transition group">
-             <div className="p-6 flex justify-between items-start">
-                            <div>
-                              <h3 className="text-2xl font-bold text-gray-900">
-                                RECENT PROJECT
-                              </h3>
-                              <p className="text-gray-500">See all</p>
-                            </div>
-                            <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
-                              →
-                            </p>
-                          </div>
-                          <Image
-                            src={assets.sushiman_tb}
-                            alt="Sushiman Preview"
-                            width={520}
-                            height={520}
-                            className="shadow-lg shadow-gray-500 group-hover:shadow-sm border-7 border-white rounded-xl rotate-1 ml-3 mt-13 transform transition duration-300 group-hover:rotate-2 group-hover:-translate-y-15"
-                          />
-            </Link>
-          </div>
-          <div className="row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
-            <Link href="/experience">{/* <p>Experience</p> */}</Link>
-          </div>
-        </div>
-
-        {/* <div className="grid auto-rows-[150px] grid-cols-4 gap-6">
-          <div className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">A</div>
-          <div className="row-span-3 col-span-2 grid grid-cols-2 gap-6">
-            <div className="row-span-1 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">B</div>
-            <div className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">C</div>
-            <div className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">D</div>
-          </div>
-          <div className="row-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">E</div>
-          <div className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">F</div>
-          <div className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">G</div>
-          <div className="row-span-1 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">H</div>
-        </div> */}
-      </section>
-      {/* <section className="mt-10 flex flex-col md:flex-row items-center justify-center gap-10 max-md:px-4">
-        <div className="relative shadow-2xl shadow-zinc-600/40 rounded-2xl overflow-hidden shrink-0">
-          <Image
-            className="max-w-md w-full object-cover rounded-2xl"
-            src={assets.user_image}
-            alt=""
-            width={200}
-          />
-        </div>
-        <div className="text-sm text-slate-600 max-w-lg">
-          <h1 className="text-xl uppercase font-semibold text-slate-700">
-            Welcome To My Portfolio!
-          </h1>
-          <div className="w-24 h-[3px] rounded-full bg-gradient-to-r from-zinc-400 to-[#DDD9FF]"></div>
-          <p className="mt-8">
-            Ni Wayan Putri Satya Uttami.{" "}
-          </p>
-          <p className="mt-4">
-            Software Developer.
-          </p>
-          <p className="mt-4">
-            From UI design systems to automation-ready layouts, PrebuiltUI
-            empowers you to build beautifully and scale effortlessly.
-          </p>
-          <button className="flex items-center gap-2 mt-8 hover:-translate-y-0.5 transition bg-gradient-to-r from-zinc-600 to-[#FFFFFF] py-3 px-8 rounded-full text-white">
-            <span>Read more</span>
-            <svg
-              width="13"
-              height="12"
-              viewBox="0 0 13 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12.53 6.53a.75.75 0 0 0 0-1.06L7.757.697a.75.75 0 1 0-1.06 1.06L10.939 6l-4.242 4.243a.75.75 0 0 0 1.06 1.06zM0 6v.75h12v-1.5H0z"
-                fill="#fff"
+              <Image
+                src={assets.sushiman_tb}
+                alt="Sushiman Preview"
+                width={520}
+                height={520}
+                className="shadow-lg shadow-gray-500 group-hover:shadow-sm border-7 border-white rounded-xl rotate-1 ml-3 mt-13 transform transition duration-300 group-hover:rotate-2 group-hover:-translate-y-15"
               />
-            </svg>
-          </button>
+            </Link>
+          </div>
+
+          <div className="row-span-2 col-span-3 rounded-xl bg-base-grey bg-[#F5F5F5]">
+            <Link href="/about" className="transition group">
+              <div className="px-10 mt-10 w-120 flex justify-between items-start">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {" "}
+                    Your ultimate website developer.
+                  </h3>
+                  <p className="text-gray-500">
+                    Eliminate the hassle of working with developers lacking
+                    design sense. I combine expertise, passion, and vision to
+                    make your ideas real.
+                  </p>
+                </div>
+              </div>
+              <div className="px-10 mt-3 flex gap-4 items-center">
+              <p className="text-gray-500 hover:text-grey-800">Get to know more</p>
+                <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
+                  →
+                </p>
+                </div>
+            </Link>
+          </div>
         </div>
-      </section> */}
+      </section>
     </>
   );
 }

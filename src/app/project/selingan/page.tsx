@@ -15,20 +15,17 @@ export default function Selingan() {
               <div>
                 <h3 className="text-4xl font-bold text-gray-900">SELINGAN</h3>
                 <p className="text-gray-500 mt-4 w-200">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                  semper lectus vitae augue suscipit elementum. Vivamus non purus id
-                  erat pulvinar vestibulum nec in arcu. Mauris ac egestas elit. Cras
-                  nec cursus arcu. Praesent egestas risus nulla, vitae egestas ipsum
-                  suscipit sagittis. Ut a tellus tristique, euismod justo in,
-                  euismod quam. Sed pellentesque dignissim lacus a viverra. Mauris
-                  tristique cursus urna, at commodo purus auctor eu. Ut vestibulum
-                  efficitur finibus. Cras ornare lorem ut eleifend consequat.
-                  Quisque eros nunc, laoreet at sapien vitae, interdum euismod
-                  sapien.
+                  A digital platform designed to make your free time more meaningful. Whether you’re looking for fun and exciting activities to join or want to host your own events, SELINGAN makes it simple. It connects people with new experiences from casual meetups and workshops to outdoor adventures all in one easy-to-use website.
                 </p>
-                <div className="flex gap-3 text-gray-500 mt-3 h-[100px]">
-                  <p>Web Design</p>
-                  <p>Brand & Product Refresh</p>
+                <p className="text-gray-500 mt-4 w-200">
+                 I developed the <span className="text-black font-bold">Flask API</span>  and connected it with the <span className="text-black font-bold">ReactJS interface</span> . I also built the <span className="text-black font-bold">geolocation</span> feature using <span className="text-black font-bold">Leaflet</span>  to display activity locations on an interactive map. On the frontend, I used <span className="text-black font-bold">Ant Design</span> and <span className="text-black font-bold">TailwindCSS</span> to create a clean and responsive user experience.
+                </p>
+                <div className="flex gap-3 text-white text-sm mt-10">
+                  <p className="rounded-xl bg-[#404040] px-2">Full Stack Development</p>
+                  <p className="rounded-xl bg-[#404040] px-2">ReactJS</p>
+                  <p className="rounded-xl bg-[#404040] px-2">Flask</p>
+                  <p className="rounded-xl bg-[#404040] px-2">Geolocation</p>
+                  <p className="rounded-xl bg-[#404040] px-2">RESTFull API</p>
                 </div>
               </div>
             </div>

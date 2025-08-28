@@ -15,20 +15,17 @@ export default function Apriori() {
           <div>
             <h3 className="text-4xl font-bold text-gray-900">APRIORI</h3>
             <p className="text-gray-500 mt-4 w-200">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              semper lectus vitae augue suscipit elementum. Vivamus non purus id
-              erat pulvinar vestibulum nec in arcu. Mauris ac egestas elit. Cras
-              nec cursus arcu. Praesent egestas risus nulla, vitae egestas ipsum
-              suscipit sagittis. Ut a tellus tristique, euismod justo in,
-              euismod quam. Sed pellentesque dignissim lacus a viverra. Mauris
-              tristique cursus urna, at commodo purus auctor eu. Ut vestibulum
-              efficitur finibus. Cras ornare lorem ut eleifend consequat.
-              Quisque eros nunc, laoreet at sapien vitae, interdum euismod
-              sapien.
+              A data mining project that analyzes retail transactions to uncover frequent itemsets and generate association rules, showing which products are often purchased together.
             </p>
-            <div className="flex gap-3 text-gray-500 mt-3 h-[100px]">
-              <p>Market Basket Analysis</p>
-              <p>Data Mining</p>
+            <p className="text-gray-500 mt-4 w-200">
+              I applied the <span className="text-black font-bold">Apriori algorithm</span> to retail datasets, extracting strong product pairings and frequently bought item combinations. These insights supported marketing strategies, promotions, and retail layout optimization.
+            </p>
+            <div className="flex gap-3 text-white text-sm mt-10">
+              <p className="rounded-xl bg-[#404040] px-2">Data Mining</p>
+              <p className="rounded-xl bg-[#404040] px-2">Python</p>
+              <p className="rounded-xl bg-[#404040] px-2">Apriori Algorithm</p>
+              <p className="rounded-xl bg-[#404040] px-2">Association Rules</p>
+              <p className="rounded-xl bg-[#404040] px-2">Business Intelligence</p>
             </div>
           </div>
         </div>

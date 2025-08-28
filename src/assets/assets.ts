@@ -40,6 +40,7 @@ import project from './project.jpeg';
 import sushiman_tb from './sushiman_tb.png';
 import selingan_tb from './selingan_tb.png';
 import marketbasket_tb from './marketbasket_tb.png';
+import albert_tb from './albert_tb.png';
 import pj_sm_1 from './pj_sm_1.png';
 import pj_sm_2 from './pj_sm_2.png';
 import pj_sm_3 from './pj_sm_3.png';
@@ -51,10 +52,26 @@ import pj_sl_3 from './pj_sl_3.png';
 import pj_mb_1 from './pj_mb_1.png';
 import pj_mb_2 from './pj_mb_2.png';
 import pj_ab_1 from './pj_ab_1.png';
+import pj_is_1 from './pj_is_1.png';
+import pj_is_4 from './pj_is_4.png';
+import pj_is_3 from './pj_is_3.png';
+import pj_is_2 from './pj_is_2.png';
+import pj_wh_1 from './pj_wh_1.png';
+import pj_wh_2 from './pj_wh_2.png';
+import pj_wh_3 from './pj_wh_3.png';
+import pj_wh_4 from './pj_wh_4.png';
 import about_gif from './about.gif';
 import skill_gif from './skill.gif';
 
 export const assets = {
+    pj_wh_1,
+    pj_wh_2,
+    pj_wh_3,
+    pj_wh_4,
+    pj_is_1,
+    pj_is_2,
+    pj_is_3,
+    pj_is_4,
     skill_gif,
     about_gif,
     pj_ab_1,
@@ -70,6 +87,7 @@ export const assets = {
     pj_sm_5,
     sushiman_tb,
     selingan_tb,
+    albert_tb,
     marketbasket_tb,
     project,
     user_me,

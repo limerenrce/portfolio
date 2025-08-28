@@ -84,7 +84,7 @@ const sideItems = [
   {
     id: "contact",
     label: "Contact",
-    href: "/contact",
+    href: "/about#contact",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -1,11 +1,11 @@
-import Breadcrumb from '@/components/breadcrumb'
+// import Breadcrumb from '@/components/breadcrumb'
 import React from 'react'
 
 export default function Contact() {
   return (
       <>
           <section>
-            <Breadcrumb />
+            {/* <Breadcrumb /> */}
     
             <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-5">
               <div className="col-span-3 text-left">
