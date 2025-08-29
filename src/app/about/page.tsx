@@ -1,13 +1,13 @@
-import { assets } from "@/assets/assets"; 
+import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 import Contact from "../contact/page";
+import Marquee from "@/components/marquee";
 
 export default function About() {
   return (
     <>
-      <section> 
-
+      <section>
         <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-5">
           <div className="col-span-3 text-left">
             <h1 className="text-4xl capitalize font-bold mb-4 w-[300]">
@@ -53,27 +53,27 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-8 overflow-hidden p-4">
-          <div className="marquee-content flex gap-4 items-center animate-marquee">
-            <div className="px-4 py-2 w-full">
-              <Image src={assets.firebase} alt="firebase" />
-            </div>
-            <div className="px-4 py-2 w-full">
-              <Image src={assets.figma} alt="firebase" />
-            </div>
-            <div className="px-4 py-2 w-full">
-              <Image src={assets.git} alt="firebase" />
-            </div>
-            <div className="px-4 py-2 w-full">
-              <Image src={assets.mongodb} alt="firebase" />
-            </div>
-            <div className="px-4 py-2 w-full">
-              <Image src={assets.vscode} alt="firebase" />
-            </div>
+        <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-25">
+          <div className="col-span-3 text-left">
+            <h1 className="text-4xl capitalize font-bold mb-4 w-[400]">
+              Here are the list what I am capable of.
+            </h1>
+          </div>
+          <div className="col-span-1>">
+            {/* <Link
+              className="lg:flex items-center gap-3 py-2 px-2 w-30 mt-10 ml-43 rounded-full border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5]"
+              href="#contact"
+            >
+              Contact{" "}
+              <Image src={assets.arrow_icon} alt="contact" className="w-3" />
+            </Link> */}
           </div>
         </div>
+        <div className="mt-8 overflow-hidden p-4">
+          <Marquee />
+        </div>
 
-        <div className="mt-10 grid auto-rows-[100px] grid-cols-6 gap-6">
+        <div className="mt-20 grid auto-rows-[100px] grid-cols-6 gap-6">
           <div className="relative overflow-x-hidden row-span-4 col-span-4 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
             <Image
               src={assets.skill_gif}
@@ -138,11 +138,9 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-8" id="contact">
-        <Contact/>
-
+        <div className="mt-25" id="contact">
+          <Contact />
         </div>
-
       </section>
     </>
   );

@@ -44,7 +44,7 @@ export default function RootLayout({
               </div> 
               <div className="col-span-1 ml-80 transition color">
                 <Link
-                  className="flex font-medium items-center gap-3 w-fit px-3 py-1 text-gray-600 bg-base-grey bg-[#F5F5F5] transition-colors duration-300 transform rounded-lg hover:bg-[#5C5429] hover:text-yellow-300"
+                  className="flex font-medium items-center gap-3 w-fit px-3 py-2 text-gray-600 bg-base-grey bg-[#F5F5F5] transition-colors duration-300 transform rounded-lg hover:bg-[#5C5429] hover:text-yellow-300"
                   href="/resume.pdf"
                   download="resume"
                   target="_blank"

@@ -10,7 +10,7 @@ export default function Selingan() {
             {/* PAGE TITLE */}
             <div className="pt-8 flex justify-between items-start">
               <div>
-                <h3 className="text-4xl font-bold text-gray-900">SELIasdvNGAN</h3>
+                <h3 className="text-4xl font-bold text-gray-900">SELINGAN</h3>
                 <p className="text-gray-500 mt-4 w-200">
                   A digital platform designed to make your free time more meaningful. Whether you’re looking for fun and exciting activities to join or want to host your own events, SELINGAN makes it simple. It connects people with new experiences from casual meetups and workshops to outdoor adventures all in one easy-to-use website.
                 </p>

@@ -84,7 +84,7 @@ const sideItems = [
   {
     id: "contact",
     label: "Contact",
-    href: "/about#contact",
+    href: "/contact",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,12 @@ const sideItems = [
 
 export default function Sidebar() {
   const pathname = usePathname();
-  const isActive = (path: Url) => pathname === path;
+  const isActive = (path: Url) => {
+  if (path === "/") {
+    return pathname === "/";
+  }
+  return pathname.startsWith(path as string);
+}; 
 
   return (
     <>
