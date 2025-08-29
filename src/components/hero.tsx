@@ -29,22 +29,23 @@ export default function Hero() {
         <div className="mt-10 grid auto-rows-[100px] grid-cols-6 gap-6">
           <div className="row-span-3 col-span-3 grid grid-cols-2 gap-6 ">
             <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-br from-[#F5F5F5] to-white p-4 flex flex-col items-center justify-center text-center">
-              <h2 className="text-5xl font-bold">100+</h2>
-              <p className="text-sm mt-2">Completed Projects</p>
+              <p className="text-xs mb-1">GPA</p>
+              <h2 className="text-5xl font-bold">3.93</h2>
+              <p className="text-xs mt-1">IS student at Undiksha</p>
             </div>
             <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-bl from-[#F5F5F5] to-white p-4 flex flex-col items-center justify-center text-center">
               {" "}
-              <h2 className="text-2xl font-semibold">Webflow Expert</h2>
+              <h2 className="text-2xl font-semibold">BNSP Certified</h2>
             </div>
             <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-tr from-[#F5F5F5] to-yellow p-4 flex flex-col items-center justify-center text-center">
               {" "}
-              <h2 className="text-5xl font-bold">6</h2>
+              <h2 className="text-5xl font-bold">4</h2>
               <p className="text-sm mt-2">Years Experience</p>
             </div>
             <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-tl from-[#F5F5F5] to-white p-4 flex flex-col items-center justify-center text-center">
               {" "}
-              <h2 className="text-5xl font-bold">50+</h2>
-              <p className="text-sm mt-2">Satisfied Clients</p>
+              <h2 className="text-5xl font-bold">5+</h2>
+              <p className="text-sm mt-2">Full-stack project</p>
             </div>
           </div>
 

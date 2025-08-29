@@ -10,8 +10,8 @@ export default function About() {
       <section>
         <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-5">
           <div className="col-span-3 text-left">
-            <h1 className="text-4xl capitalize font-bold mb-4 w-[300]">
-              About Me
+            <h1 className="text-4xl capitalize font-bold mb-4 w-[460]">
+              Your ultimate website developer
             </h1>
           </div>
           <div className="col-span-1>">
@@ -30,14 +30,13 @@ export default function About() {
             <div className="p-6 flex justify-between items-start">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900">
-                  Your ultimate website developer.
+                  👋 About Me
                 </h3>
                 <p className="text-gray-500">
-                  Hi, I’m Satya Uttami 👋 A passionate Information Systems
-                  student (GPA 3.93) who builds production-ready web & mobile
-                  apps with React, Flutter, and Flask. I thrive at the
-                  intersection of design and development, turning ideas into
-                  scalable solutions. My goal? To bring impact through clean
+                  I’m a Full Stack Developer with a strong foundation in
+                  frontend, backend, and UI/UX design. I enjoy building digital
+                  products that are not only functional but also intuitive and
+                  visually engaging. My goal? To bring impact through clean
                   code, intuitive design, and strong teamwork.{" "}
                 </p>
               </div>
@@ -55,7 +54,7 @@ export default function About() {
 
         <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-25">
           <div className="col-span-3 text-left">
-            <h1 className="text-4xl capitalize font-bold mb-4 w-[400]">
+            <h1 className="text-4xl capitalize font-bold mb-4 w-[460]">
               Here are the list what I am capable of.
             </h1>
           </div>
@@ -69,7 +68,7 @@ export default function About() {
             </Link> */}
           </div>
         </div>
-        <div className="mt-8 overflow-hidden p-4">
+        <div className="mt-10 overflow-hidden p-4">
           <Marquee />
         </div>
 
@@ -82,17 +81,26 @@ export default function About() {
             />
           </div>
 
-          <div className="row-span-4 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
+          <div className="row-span-2 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
             <div className="p-6 flex justify-between items-start">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900">
-                  Active-Passive
+                  🎨 Frontend
                 </h3>
                 <p className="text-gray-500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vel fringilla velit. Cras ut arcu ut dui scelerisque
-                  scelerisque. Integer non lectus viverra, vehicula metus vel,
-                  condimentum nunc.{" "}
+                  Skilled in ReactJS, TailwindCSS, Ant Design, Flutter, and
+                  creating user-friendly interfaces.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row-span-2 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
+            <div className="p-6 flex justify-between items-start">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900">⚙️ Backend</h3>
+                <p className="text-gray-500">
+                  Experienced with Flask, PHP, REST APIs, MySQL/XAMPP, and
+                  integrating scalable services.
                 </p>
               </div>
             </div>
@@ -101,21 +109,10 @@ export default function About() {
           <div className="row-span-2 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
             <div className="p-6 flex justify-between items-start">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900">Velma</h3>
+                <h3 className="text-2xl font-bold text-gray-900">🖌️ Design</h3>
                 <p className="text-gray-500">
-                  As a Learning Developer Lead, I designed programs with 90%+
-                  satisfaction.{" "}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row-span-2 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
-            <div className="p-6 flex justify-between items-start">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900">Sakapuan</h3>
-                <p className="text-gray-500">
-                  As a R&D Manager, I led data strategies for content
-                  engagement.{" "}
+                  Proficient in Figma for designing high-fidelity prototypes and
+                  translating business needs into clear, user-centered designs.
                 </p>
               </div>
             </div>
@@ -124,16 +121,26 @@ export default function About() {
             <div className="p-6 flex justify-between items-start">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900">
-                  Achievements & Publications
+                  🎯 Goal-Oriented
                 </h3>
                 <p className="text-gray-500">
-                  (mini section at bottom) → medals, competition results,
-                  copyrighted works.{" "}
+                  I focus on building solutions that solve real problems, from
+                  streamlining POS transactions, enhancing academic record
+                  systems, to creating platforms that connect communities.
                 </p>
               </div>
-              <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
-                →
-              </p>
+            </div>
+          </div>
+          <div className="row-span-2 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
+            <div className="p-6 flex justify-between items-start">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900">🤔 More..</h3>
+                <p className="text-gray-500">
+                  I aim to grow as a developer who bridges technology, design,
+                  and problem-solving, delivering impactful solutions that
+                  improve everyday experiences.{" "}
+                </p>
+              </div>
             </div>
           </div>
         </div>

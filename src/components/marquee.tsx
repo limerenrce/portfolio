@@ -9,7 +9,14 @@ export default function Marquee() {
     "git",
     "firebase",
     "mongodb",
-    "mobile_icon",
+    "canva",
+    "docker", 
+    "flutter",
+    "react_js",
+    "python",
+    "wordpress",
+    "tailwind",
+    "next_js",
   ];
 
   return (
@@ -44,7 +51,7 @@ export default function Marquee() {
                 key={index}
                 src={assets[company]} // ✅ bracket notation for TypeScript
                 alt={company}
-                className="w-20 h-20 object-contain mx-6"
+                className="w-16 h-16 object-contain mx-6"
                 draggable={false}
               />
             ))}

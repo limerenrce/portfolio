@@ -6,11 +6,20 @@ import edu_icon from './edu-icon.png';
 import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
-import vscode from './vscode.png';
-import firebase from './firebase.png';
-import figma from './figma.png';
-import git from './git.png';
-import mongodb from './mongodb.png';
+import canva from './lg-canva.png';
+import docker from './lg-docker.png';
+import figma from './lg-figma.png';
+import firebase from './lg-firebase.png';
+import flutter from './lg-flutter.png';
+import git from './lg-git.png';
+import github from './lg-github.png';
+import mongodb from './lg-mongodb.png';
+import next_js from './lg-next-js.png';
+import python from './lg-python.png';
+import react_js from './react.svg';
+import tailwind from './lg-tailwind.png';
+import vscode from './lg-vscode.png';
+import wordpress from './lg-wordpress.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
 import logo_dark from './logo_dark.png';
@@ -28,10 +37,10 @@ import menu_black from './menu-black.png';
 import menu_white from './menu-white.png';
 import close_black from './close-black.png';
 import close_white from './close-white.png';
-import web_icon from './web-icon.png';
-import mobile_icon from './mobile-icon.png';
-import ui_icon from './ui-icon.png';
-import graphics_icon from './graphics-icon.png';
+import web_icon from './icon-web.png';
+import mobile_icon from './icon-mobile.png';
+import be_icon from './icon-be.png';
+import ui_icon from './icon-ui.png';
 import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
@@ -62,6 +71,7 @@ import pj_wh_3 from './pj_wh_3.png';
 import pj_wh_4 from './pj_wh_4.png';
 import about_gif from './about.gif';
 import skill_gif from './skill.gif';
+import next from 'next';
 
 export const assets = {
     pj_wh_1,
@@ -98,11 +108,20 @@ export const assets = {
     edu_icon_dark,
     project_icon,
     project_icon_dark,
-    vscode,
-    firebase,
+    canva,
+    docker,
     figma,
+    firebase,
+    flutter,
     git,
+    github,
     mongodb,
+    next_js,
+    python,
+    react_js,
+    tailwind,
+    vscode,
+    wordpress, 
     right_arrow_white,
     logo,
     logo_dark,
@@ -123,7 +142,7 @@ export const assets = {
     web_icon,
     mobile_icon,
     ui_icon,
-    graphics_icon,
+    be_icon,
     right_arrow,
     send_icon,
     right_arrow_bold,
@@ -156,8 +175,8 @@ export const workData = [
 export const serviceData = [
     { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
     { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.be_icon, title: 'Backend Dev', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
+    { icon: assets.ui_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
 ]
 
 export const infoList = [

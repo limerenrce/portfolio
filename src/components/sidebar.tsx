@@ -103,11 +103,11 @@ const sideItems = [
 export default function Sidebar() {
   const pathname = usePathname();
   const isActive = (path: Url) => {
-  if (path === "/") {
-    return pathname === "/";
-  }
-  return pathname.startsWith(path as string);
-}; 
+    if (path === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(path as string);
+  };
 
   return (
     <>
@@ -120,12 +120,13 @@ export default function Sidebar() {
           />
         </div>
         <div className=" flex flex-col pt-10 bg-base-grey bg-[#F5F5F5] text-gray-900 rounded-lg">
-          <div className="mx-10">
-            <h4 className="mx-5 mt-2 font-medium text-gray-800 ">Satya Uttami</h4>
-            <p className=" mt-1  text-sm font-medium text-gray-600 ">
-              satyautta@gmail.com
-            </p>
-          </div>
+          <h4 className="text-center mt-2 font-medium text-gray-800 ">
+            Satya Uttami
+          </h4>
+          <p className=" mt-1 text-center text-sm font-medium text-gray-600 ">
+            satyautta@gmail.com
+          </p>
+
           <div className="mt-3 justify-between flex-1 ">
             <nav>
               <ul>
