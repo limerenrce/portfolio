@@ -29,23 +29,22 @@ export default function Hero() {
         <div className="mt-10 grid auto-rows-[100px] grid-cols-6 gap-6">
           <div className="row-span-3 col-span-3 grid grid-cols-2 gap-6 ">
             <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-br from-[#F5F5F5] to-white p-4 flex flex-col items-center justify-center text-center">
-              <p className="text-xs mb-1">GPA</p>
-              <h2 className="text-5xl font-bold">3.93</h2>
+              <p className="text-xs mb-1"><span className="text-5xl font-bold">3.93</span>GPA</p>
               <p className="text-xs mt-1">IS student at Undiksha</p>
             </div>
             <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-bl from-[#F5F5F5] to-white p-4 flex flex-col items-center justify-center text-center">
               {" "}
-              <h2 className="text-2xl font-semibold">BNSP Certified</h2>
+              <h2 className="text-3xl font-semibold">BNSP CERTIFIED</h2>
             </div>
             <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-tr from-[#F5F5F5] to-yellow p-4 flex flex-col items-center justify-center text-center">
               {" "}
               <h2 className="text-5xl font-bold">4</h2>
-              <p className="text-sm mt-2">Years Experience</p>
+              <p className="text-xs mt-2">Years Experience</p>
             </div>
             <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-tl from-[#F5F5F5] to-white p-4 flex flex-col items-center justify-center text-center">
               {" "}
               <h2 className="text-5xl font-bold">5+</h2>
-              <p className="text-sm mt-2">Full-stack project</p>
+              <p className="text-xs mt-2">Full-stack project</p>
             </div>
           </div>
 
@@ -76,11 +75,11 @@ export default function Hero() {
             <Link href="/about" className="transition group">
               <div className="px-10 mt-10 w-120 flex justify-between items-start">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">
+                  <h3 className="text-xl font-bold text-gray-900">
                     {" "}
                     Your ultimate website developer.
                   </h3>
-                  <p className="text-gray-500">
+                  <p className="text-gray-500 text-sm">
                     Eliminate the hassle of working with developers lacking
                     design sense. I combine expertise, passion, and vision to
                     make your ideas real.
@@ -88,8 +87,8 @@ export default function Hero() {
                 </div>
               </div>
               <div className="px-10 mt-3 flex gap-4 items-center">
-              <p className="text-gray-500 hover:text-grey-800">Get to know more</p>
-                <p className="text-gray-800 hover:text-black text-4xl duration-500 mr-6 group-hover:translate-x-5">
+              <p className=" text-sm  text-gray-500 hover:text-grey-800">Get to know more</p>
+                <p className="text-gray-800 hover:text-black text-2xl duration-500 mr-6 group-hover:translate-x-5">
                   →
                 </p>
                 </div>
