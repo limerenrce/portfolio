@@ -1,14 +1,11 @@
-import { assets } from "@/assets/assets";
-import Breadcrumb from "@/components/breadcrumb";
+import { assets } from "@/assets/assets"; 
 import Image from "next/image";
 import React from "react";
 
 export default function Hokky() {
   return (
     <>
-      <section>
-        {/* Breadcrumbs */}
-        <Breadcrumb />
+      <section> 
 
         {/* PAGE TITLE */}
         <div className="pt-8 flex justify-between items-start">

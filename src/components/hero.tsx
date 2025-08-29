@@ -9,40 +9,27 @@ export default function Hero() {
     <>
       <section>
         {/* PAGE TITLE */}
-        <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-12">
+        <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-5">
           <div className="col-span-3 text-left">
-            <h1 className="text-4xl capitalize font-bold mb-4 w-[300]">
+            <h1 className="text-4xl capitalize font-bold mb-4 w-[500]">
               Junior Website Developer
             </h1>
           </div>
           <div className="col-span-1>">
-            <Link
-              className="lg:flex items-center gap-3  w-50 ml-25 text-blue-500 transition group"
-              href="/resume.pdf"
-              download="resume"
-              target="_blank"
-            >
-              Download CV{" "}
-              <p className="text-gray-800 hover:text-black text-2xl duration-500 mr-6 group-hover:translate-x-5">
-                →
-              </p>
-            </Link>
-            <Link
-              className="lg:flex items-center gap-3 py-2 px-2 w-50 ml-33 text-blue-500 transition group"
-              href="/about#contact"
+            {/* <Link
+              className="lg:flex items-center gap-3 py-2 px-2 w-30 mt-10 ml-43 rounded-full border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5]"
+              href="#contact"
             >
               Contact{" "}
-              <p className="text-gray-800 hover:text-black text-2xl duration-500 mr-6 group-hover:translate-x-5">
-                →
-              </p>
-            </Link>
+              <Image src={assets.arrow_icon} alt="contact" className="w-3" />
+            </Link> */}
           </div>
         </div>
 
         {/* BENTO BOX MENU */}
         <div className="mt-10 grid auto-rows-[100px] grid-cols-6 gap-6">
           <div className="row-span-3 col-span-3 grid grid-cols-2 gap-6 ">
-            <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-br from-yellow-100 to-yellow p-4 flex flex-col items-center justify-center text-center">
+            <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-br from-[#F5F5F5] to-white p-4 flex flex-col items-center justify-center text-center">
               <h2 className="text-5xl font-bold">100+</h2>
               <p className="text-sm mt-2">Completed Projects</p>
             </div>
@@ -55,14 +42,14 @@ export default function Hero() {
               <h2 className="text-5xl font-bold">6</h2>
               <p className="text-sm mt-2">Years Experience</p>
             </div>
-            <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-tl from-yellow-100 to-yellow p-4 flex flex-col items-center justify-center text-center">
+            <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-tl from-[#F5F5F5] to-white p-4 flex flex-col items-center justify-center text-center">
               {" "}
               <h2 className="text-5xl font-bold">50+</h2>
               <p className="text-sm mt-2">Satisfied Clients</p>
             </div>
           </div>
 
-          <div className="relative overflow-hidden row-span-5 col-span-3 rounded-xl bg-base-grey bg-[#F5F5F5] p-4">
+          <div className="relative overflow-hidden row-span-5 col-span-3 rounded-xl bg-gradient-to-tl from-[#5C5429] to-white p-4">
             <Link href="/project" className="transition group">
               <div className="p-6 flex justify-between items-start">
                 <div>
@@ -85,7 +72,7 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="row-span-2 col-span-3 rounded-xl bg-base-grey bg-[#F5F5F5]">
+          <div className="row-span-2 col-span-3 rounded-xl bg-gradient-to-t from-[#F5F5F5] to-white">
             <Link href="/about" className="transition group">
               <div className="px-10 mt-10 w-120 flex justify-between items-start">
                 <div>

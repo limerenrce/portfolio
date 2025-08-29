@@ -1,5 +1,4 @@
-import { assets } from "@/assets/assets";
-import Breadcrumb from "@/components/breadcrumb";
+import { assets } from "@/assets/assets"; 
 import Image from "next/image";
 import React from "react";
 import Contact from "../contact/page";
@@ -7,8 +6,7 @@ import Contact from "../contact/page";
 export default function About() {
   return (
     <>
-      <section>
-        <Breadcrumb />
+      <section> 
 
         <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-5">
           <div className="col-span-3 text-left">

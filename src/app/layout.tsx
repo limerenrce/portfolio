@@ -4,6 +4,8 @@ import "./globals.css";
 // import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Sidebar from "@/components/sidebar";
+import Breadcrumb from "@/components/breadcrumb";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,9 +37,35 @@ export default function RootLayout({
           <Sidebar />
 
           {/* Main content */}
-          <main className="flex-1 ml-64 overflow-y p-8 bg-[#FFFFFF]">
-             {children}
-             <Footer/>
+          <main className="flex-1 overflow-y ml-64 p-8 bg-[#FFFFFF]">
+            <div className="pt-20 bg-[#FFFFFF] grid auto-rows-[15px] grid-cols-2"> 
+              <div className="col-span-1">
+              <Breadcrumb />
+              </div> 
+              <div className="col-span-1 ml-80 transition color">
+                <Link
+                  className="flex font-medium items-center gap-3 w-fit px-3 py-1 text-gray-600 bg-base-grey bg-[#F5F5F5] transition-colors duration-300 transform rounded-lg hover:bg-[#5C5429] hover:text-yellow-300"
+                  href="/resume.pdf"
+                  download="resume"
+                  target="_blank"
+                >
+                  Download CV{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    className="bi bi-download"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+            {children}
+            <Footer />
           </main>
         </div>
       </body>

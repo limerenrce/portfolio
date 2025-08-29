@@ -59,7 +59,7 @@ const sideItems = [
         <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z" />
       </svg>
     ),
-  }, 
+  },
   {
     id: "blog",
     label: "Blog",
@@ -106,45 +106,45 @@ export default function Sidebar() {
 
   return (
     <>
-      <aside className="w-64 bg-[#404040] text-gray-900 fixed h-screen p-4">
-        <div className="flex flex-col items-center mt-6 -mx-2">
+      <aside className="w-64 fixed h-screen p-4">
+        <div className="flex flex-col items-center mt-10 -mx-2">
           <Image
-            className="object-cover w-24 h-24 mx-2 rounded-full"
+            className=" object-cover w-35 h-35 translate-y-10 mx-2 rounded-full"
             src={assets.user_me}
             alt="avatar"
           />
-          <h4 className="mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200">
-            Satya Uttami
-          </h4>
-          <p className="mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400">
-            satyautta@gmail.com
-          </p>
         </div>
+        <div className=" flex flex-col pt-10 bg-base-grey bg-[#F5F5F5] text-gray-900 rounded-lg">
+          <div className="mx-10">
+            <h4 className="mx-5 mt-2 font-medium text-gray-800 ">Satya Uttami</h4>
+            <p className=" mt-1  text-sm font-medium text-gray-600 ">
+              satyautta@gmail.com
+            </p>
+          </div>
+          <div className="mt-3 justify-between flex-1 ">
+            <nav>
+              <ul>
+                {sideItems.map((eachItem) => (
+                  <li key={eachItem.id}>
+                    <Link
+                      className={`${
+                        isActive(eachItem.href)
+                          ? "flex items-center px-4 py-2 m-5 text-yellow-300 bg-[#5C5429] rounded-lg  "
+                          : "flex items-center px-4 py-2 m-5 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-[#5C5429] hover:text-yellow-300"
+                      }`}
+                      href={eachItem.href}
+                    >
+                      {eachItem.icon}
 
-        <div className="flex flex-col justify-between flex-1 mt-6">
-          <nav>
-            <ul>
-              {sideItems.map((eachItem) => (
-                <li key={eachItem.id}>
-                  <Link
-                    className={`${
-                      isActive(eachItem.href)
-                        ? "flex items-center px-4 py-2 m-5 text-yellow-300 bg-[#5C5429] rounded-lg dark:bg-[#5C5429] dark:text-yellow-300"
-                        : "flex items-center px-4 py-2 m-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-[#5C5429] dark:hover:bg-[#5C5429] dark:hover:text-yellow-300 hover:text-gray-700"
-                    }`}
-                    href={eachItem.href}
-                  >
-                    {eachItem.icon}
-
-                    <span className="mx-4 font-medium">{eachItem.label}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+                      <span className="mx-4 font-medium">{eachItem.label}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
         </div>
       </aside>
-      
     </>
   );
 }

@@ -1,5 +1,4 @@
-import { assets } from "@/assets/assets";
-import Breadcrumb from "@/components/breadcrumb";
+import { assets } from "@/assets/assets"; 
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -7,9 +6,7 @@ import React from "react";
 export default function Work() {
   return (
     <>
-      <section>
-        {/* Breadcrumbs */}
-        <Breadcrumb />
+      <section> 
 
         {/* PAGE TITLE */}
         <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-5">

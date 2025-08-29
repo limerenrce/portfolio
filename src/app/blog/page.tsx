@@ -1,12 +1,9 @@
-import Breadcrumb from "@/components/breadcrumb";
-
 export default async function Page() {
   const response = await fetch("https://dummyjson.com/posts");
   const data = await response.json();
   return (
     <>
-    <section>
-      <Breadcrumb/>
+    <section> 
 
       <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-5">
           <div className="col-span-3 text-left">
