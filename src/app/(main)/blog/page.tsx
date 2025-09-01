@@ -1,5 +1,5 @@
 export default async function Page() {
-  const response = await fetch("https://dummyjson.com/posts");
+  const response = await fetch("http://localhost:8000/api/v1/blog");
   const data = await response.json();
   return (
     <>
@@ -27,13 +27,15 @@ export default async function Page() {
           <div className="text-left">
         
         <ul>
-        {data.posts.map((post: { id: number; title: string }) => (
+        {data.posts.map((post: { id: number; title: string; author: {name: string } }) => (
           <li key={post.id} className="mb-2">
             <a
               href={`/blog/${post.id}`}
               className="text-blue-500 hover:underline"
             >
               {post.title}
+              <br />
+              {post.author.name}
             </a>
           </li>
         ))}
