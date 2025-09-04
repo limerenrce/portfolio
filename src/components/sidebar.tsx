@@ -120,8 +120,8 @@ export default function Sidebar() {
           />
         </div>
         <div className=" flex flex-col pt-10 bg-base-grey bg-[#F5F5F5] text-gray-900 rounded-lg">
-          <h4 className="text-center mt-2 font-medium text-gray-800 ">
-            Satya Uttami
+          <h4 className="text-center mt-2 font-bold text-gray-800 ">
+            SATYA UTTAMI
           </h4>
           <p className=" mt-1 text-center text-sm font-medium text-gray-600 ">
             satyautta@gmail.com

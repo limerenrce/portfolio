@@ -38,13 +38,13 @@ export default function MainLayout({
 
           {/* Main content */}
           <main className="flex-1 overflow-y ml-64 p-8 bg-[#FFFFFF]">
-            <div className="pt-20 bg-[#FFFFFF] grid auto-rows-[15px] grid-cols-2"> 
-              <div className="col-span-1">
+            <div className="pt-20 bg-[#FFFFFF] grid auto-rows-[15px] grid-cols-3"> 
+              <div className="col-span-2">
               <Breadcrumb />
               </div> 
               <div className="col-span-1 transition color">
                 <Link
-                  className="flex font-medium items-center ml-100  gap-3 w-fit px-3 py-2 text-gray-600 bg-base-grey bg-[#F5F5F5] transition-colors duration-300 transform rounded-lg hover:bg-[#5C5429] hover:text-yellow-300"
+                  className="flex font-medium items-center ml-50  gap-3 w-fit px-3 py-2 text-gray-600 bg-base-grey bg-[#F5F5F5] transition-colors duration-300 transform rounded-lg hover:bg-[#5C5429] hover:text-yellow-300"
                   href="/resume.pdf"
                   download="resume"
                   target="_blank"
