@@ -1,25 +1,18 @@
 "use client";
-// import Image from "next/image";
+
+import { BlogPost } from "@/assets/types";
 import Link from "next/link";
 import React from "react";
 
-interface BlogCardProps {
-  title: string;
-  content: string;
-  author: string; 
-  id: number;
-  slug: string;
-  tags: string[];
-}
 
 export default function Blogcard({
   title,
   content,
   author, 
-  // id,
+  id,
   slug,
   tags,
-}: BlogCardProps) {
+}: BlogPost) {
   // const [position, setPosition] = React.useState({ x: 0, y: 0 });
   // const [tooltipVisible, setTooltipVisible] = React.useState(false);
   // const divRef = React.useRef(null);
@@ -59,25 +52,27 @@ export default function Blogcard({
           src={image}
           alt={title}
         /> */}
-        <div className="rounded-t-lg w-96 h-8 object-cover object-top bg-gradient-to-tl from-[#6f6632] to-[#453f20]"></div>
+        <div className="rounded-t-lg h-8 object-cover object-top bg-gradient-to-tl from-[#6f6632] to-[#453f20]"></div>
         <div className="p-5">
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 truncate">
             {title}
           </h5>
-          <div className="text-left text-sm text-gray-600 mb-4">
-            by {author}
+         
+          <div className="flex gap-2 text-xs ">
+             <div className="py-1  px-2  bg-yellow-300 rounded-lg">
+            by {author.name}
+            <p hidden>{id}</p>
           </div>
-          <div className="flex gap-2 mb-3">
             {tags?.map((tag) => (
               <span
                 key={tag}
-                className="px-2 py-1 text-xs bg-gray-100 rounded-lg"
+                className="py-1 h-fit"
               >
                 #{tag}
               </span>
             ))}
           </div>
-          <p className="mb-3 text-gray-700 line-clamp-2 h-12">{content}</p>
+          <p className="mt-8 text-gray-700 line-clamp-2 h-12">{content}</p>
           {/* <a
           href={`/blog/${slug}`}
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-indigo-500 rounded-lg hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-indigo-300"

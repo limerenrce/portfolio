@@ -1,3 +1,5 @@
+import { BlogPost } from "@/assets/types";
+
 export default async function BlogPostPage({
   params,
 }: {
@@ -16,21 +18,21 @@ export default async function BlogPostPage({
     return <div className="p-6 text-red-600">Post not found.</div>;
   }
 
-  const data = await response.json();
+  const data: BlogPost = await response.json();
 
   return (
     <section>
       <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-5">
         <div className="col-span-3 text-left">
           <h1 className="text-4xl capitalize font-bold mb-2">{data.title}</h1>
-          <div className="text-left text-sm text-gray-600 mb-3 ml-1">
+          <div className="text-left text-sm text-gray-600 ml-1">
             by {data.author?.name} | created on {data.created_at}
           </div>
-          <div className="flex gap-2 mb-3">
-            {data.tags?.map((tag) => (
+          <div className="flex text-left text-sm text-gray-600 mb-3 ml-1">
+            <p className="py-1 pr-2 gap-2">Tags: </p>{data.tags?.map((tag) => (
               <span
                 key={tag}
-                className="px-2 py-1 text-xs bg-gray-100 rounded-lg"
+                className="py-1 px-2 gap-2"
               >
                 #{tag}
               </span>
