@@ -19,18 +19,18 @@ export default function Paradise() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  // 🔹 Create form state
+  //  Create form state
   const [createTitle, setCreateTitle] = useState("");
   const [createContent, setCreateContent] = useState("");
   const [createTags, setCreateTags] = useState("");
 
-  // 🔹 Edit modal state
+  //  Edit modal state
   const [editTitle, setEditTitle] = useState("");
   const [editContent, setEditContent] = useState("");
   const [editTags, setEditTags] = useState("");
   const [editId, setEditId] = useState<number | null>(null);
 
-  // 🔹 Modal + Tabs
+  //  Modal + Tabs
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<"active" | "deleted">("active");
 
@@ -58,7 +58,7 @@ export default function Paradise() {
       setPosts(data.posts || []);
     } catch (err) {
       console.error("Failed to fetch posts", err);
-      setError(true); // 🔹 fallback state
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -75,7 +75,7 @@ export default function Paradise() {
       setDeletedPosts(item.posts || []);
     } catch (err) {
       console.error("Failed to fetch deleted posts", err);
-      setError(true); // 🔹 fallback state
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -202,9 +202,43 @@ export default function Paradise() {
   if (loading)
     return (
       <>
-        <div className="text-center py-10 text-gray-500 min-h-[500]">
-          <h2 className="text-2xl font-semibold mb-2">Loading..</h2>
-          <p>Please wait, we still make the connection.</p>
+        <div className="max-w-5xl mx-auto p-6">
+          {/* Header */}
+          <div className="flex justify-between items-center mb-8">
+            <h1 className="text-3xl font-bold">Admin Panel</h1>
+            <button
+              onClick={handleLogout}
+              className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-red-600"
+            >
+              Logout
+            </button>
+          </div>
+          <div className="flex gap-4 mb-6">
+            <button
+              onClick={() => setActiveTab("active")}
+              className={`px-4 py-2 rounded-lg ${
+                activeTab === "active"
+                  ? "bg-indigo-600 text-white"
+                  : "bg-gray-200 text-gray-700"
+              }`}
+            >
+              Active Posts
+            </button>
+            <button
+              onClick={() => setActiveTab("deleted")}
+              className={`px-4 py-2 rounded-lg ${
+                activeTab === "deleted"
+                  ? "bg-indigo-600 text-white"
+                  : "bg-gray-200 text-gray-700"
+              }`}
+            >
+              Deleted Posts
+            </button>
+          </div>
+          <div className="text-center py-10 text-gray-500 min-h-[500]">
+            <h2 className="text-2xl font-semibold mb-2">Loading..</h2>
+            <p>Please wait, we still make the connection.</p>
+          </div>
         </div>
       </>
     );
@@ -366,7 +400,7 @@ export default function Paradise() {
         </>
       )}
 
-      {/* 🔹 Edit Modal */}
+      {/*  Edit Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded-xl shadow-lg w-full max-w-lg">
