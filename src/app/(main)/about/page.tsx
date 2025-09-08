@@ -25,7 +25,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-10 grid auto-rows-[100px] grid-cols-6 gap-6">
+        <div className="mt-6 grid auto-rows-[100px] grid-cols-6 gap-6">
           <div className="row-span-4 col-span-2 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
             <div className="p-6 flex justify-between items-start">
               <div>

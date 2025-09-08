@@ -18,7 +18,7 @@ export default function Contact() {
             </Link> */}
           </div>
         </div>
-        <div className="mt-10 grid auto-rows grid-cols-6 gap-6">
+        <div className="mt-6 grid auto-rows grid-cols-6 gap-6">
           <div className="col-span-6 rounded-xl bg-base-grey bg-[#F5F5F5]">
             <div className="flex min-h-[500] justify-center  transition-colors duration-300">
               <div className="flex w-full transform flex-col overflow-hidden bg-[#F5F5F5] rounded-l-xl  transition-transform duration-300 md:flex-row ">

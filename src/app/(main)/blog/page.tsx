@@ -1,47 +1,63 @@
 import Blogcard from "@/components/blogcard";
 
 export default async function BlogPage() {
-  const response = await fetch("http://localhost:8000/api/v1/blog/read", {
-    cache: "no-store", // disable caching if needed
-  });
-  const data = await response.json();
+  let posts: any[] = [];
+
+  try {
+    const response = await fetch("http://localhost:8000/api/v1/blog/read", {
+      cache: "no-store",
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      posts = data.posts || [];
+    }
+  } catch (error) {
+    console.error("Failed to fetch blogs:", error);
+    // fallback to empty posts
+    posts = [];
+  }
 
   return (
     <section>
       {/* PAGE TITLE */}
-        <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-5">
-          <div className="col-span-3 text-left">
-            <h1 className="text-4xl capitalize font-bold mb-4 w-[300]">
-              Blog
-            </h1>
-          </div>
-          <div className="col-span-1>">
-            {/* <Link
-              className="lg:flex items-center gap-3 py-2 px-2 w-30 mt-10 ml-43 rounded-full border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5]"
-              href="#contact"
-            >
-              Contact{" "}
-              <Image src={assets.arrow_icon} alt="contact" className="w-3" />
-            </Link> */}
-          </div>
+      <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-5">
+        <div className="col-span-3 text-left">
+          <h1 className="text-4xl capitalize font-bold mb-4 w-[400]">
+            Writing Thoughts on The Internet
+          </h1>
         </div>
+        <div className="col-span-1"></div>
+      </div>
 
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {data.posts.map((post: any) => (
-          <Blogcard
-            key={post.id}
-            id={post.id}
-            title={post.title}
-            tags={post.tag}
-            content={post.content || "No description available"}
-            author={post.author?.name || "Unknown"}
-            // image={
-            //   post.image ??
-            //   assets.blog_df
-            // }
-            slug={post.slug}
-          />
-        ))}
+      {/* BLOG LIST */}
+      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.length > 0 ? (
+          posts.map((post: any) => (
+            <Blogcard
+              key={post.id}
+              id={post.id}
+              title={post.title}
+              tags={post.tag}
+              content={post.content || "No description available"}
+              author={post.author?.name || "Unknown"}
+              slug={post.slug}
+            />
+          ))
+        ) : (
+          <div className="grid auto-rows-[100px] grid-cols-5 gap-6">
+            <div className="relative overflow-hidden row-span-1 col-span-5 ">
+              {/* rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] */}
+              <div className="p-2">
+                {/* <h3 className="text-2xl font-bold text-gray-900">SORRY</h3> */}
+                <p className="text-gray-500">
+                  {" "}
+                  No blog posts available right now.{" "}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

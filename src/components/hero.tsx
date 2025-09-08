@@ -26,7 +26,7 @@ export default function Hero() {
         </div>
 
         {/* BENTO BOX MENU */}
-        <div className="mt-10 grid auto-rows-[100px] grid-cols-6 gap-6">
+        <div className="mt-6 grid auto-rows-[100px] grid-cols-6 gap-6">
           <div className="row-span-3 col-span-3 grid grid-cols-2 gap-6 ">
             <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-br from-[#F5F5F5] to-white p-4 flex flex-col items-center justify-center text-center">
               <p className="text-xs mb-1"><span className="text-5xl font-bold">3.93</span>GPA</p>

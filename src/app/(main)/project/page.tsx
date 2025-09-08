@@ -11,8 +11,8 @@ export default function Work() {
         {/* PAGE TITLE */}
         <div className="grid grid-cols-4 auto-rows-[100px] gap-2 pt-5">
           <div className="col-span-3 text-left">
-            <h1 className="text-4xl capitalize font-bold mb-4 w-[300]">
-              My Works
+            <h1 className="text-4xl capitalize font-bold mb-4 w-[500]">
+              What I have been build these time
             </h1>
           </div>
           <div className="col-span-1>">
@@ -28,7 +28,7 @@ export default function Work() {
 
         {/* PAGE CONTENT */}
 
-        <div className="mt-10 grid auto-rows-[90px] grid-cols-5 gap-6">
+        <div className="mt-6 grid auto-rows-[90px] grid-cols-5 gap-6">
           {/* SELINGAN */}
 
           <div className="relative overflow-hidden row-span-5 col-span-3 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5]">

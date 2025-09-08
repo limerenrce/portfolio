@@ -17,6 +17,7 @@ export default function Paradise() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [deletedPosts, setDeletedPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   // 🔹 Create form state
   const [createTitle, setCreateTitle] = useState("");
@@ -52,11 +53,13 @@ export default function Paradise() {
       const res = await fetch("http://localhost:8000/api/v1/blog/read", {
         headers: { Authorization: `Bearer ${token}` },
       });
+      if (!res.ok) throw new Error("API unavailable");
       const data = await res.json();
       setPosts(data.posts || []);
-      setLoading(false);
     } catch (err) {
       console.error("Failed to fetch posts", err);
+      setError(true); // 🔹 fallback state
+    } finally {
       setLoading(false);
     }
   };
@@ -67,11 +70,13 @@ export default function Paradise() {
       const res = await fetch("http://localhost:8000/api/v1/blog/deleted", {
         headers: { Authorization: `Bearer ${token}` },
       });
+      if (!res.ok) throw new Error("API unavailable");
       const item = await res.json();
       setDeletedPosts(item.posts || []);
-      setLoading(false);
     } catch (err) {
-      console.error("Failed to fetch posts", err);
+      console.error("Failed to fetch deleted posts", err);
+      setError(true); // 🔹 fallback state
+    } finally {
       setLoading(false);
     }
   };
@@ -194,7 +199,15 @@ export default function Paradise() {
     }
   };
 
-  if (loading) return <p className="text-center mt-10">Loading...</p>;
+  if (loading)
+    return (
+      <>
+        <div className="text-center py-10 text-gray-500 min-h-[500]">
+          <h2 className="text-2xl font-semibold mb-2">Loading..</h2>
+          <p>Please wait, we still make the connection.</p>
+        </div>
+      </>
+    );
 
   return (
     <div className="max-w-5xl mx-auto p-6">
@@ -233,110 +246,124 @@ export default function Paradise() {
         </button>
       </div>
 
-      {/* Create Post Form (only in Active tab) */}
-      {activeTab === "active" && (
-        <form
-          onSubmit={handleCreate}
-          className="p-6 bg-gray-50 rounded-xl shadow-md mb-8"
-        >
-          <h2 className="text-xl font-semibold mb-4">Create New Post</h2>
-          <input
-            value={createTitle}
-            onChange={(e) => setCreateTitle(e.target.value)}
-            placeholder="Title"
-            className="w-full p-2 border rounded mb-3"
-            required
-          />
-          <textarea
-            value={createContent}
-            onChange={(e) => setCreateContent(e.target.value)}
-            placeholder="Content"
-            className="w-full p-2 border rounded mb-"
-            required
-          />
-          <input
-            value={createTags}
-            onChange={(e) => setCreateTags(e.target.value)}
-            placeholder="Tags (comma separated)"
-            className="w-full p-2 border rounded mb-3"
-          />
-          <button
-            type="submit"
-            className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
-          >
-            Create Post
-          </button>
-        </form>
-      )}
-
-      {/* Active Posts */}
-      {activeTab === "active" && (
-        <div className="space-y-6">
-          {posts.map((post) => (
-            <div
-              key={post.id}
-              className="p-6 border rounded-lg bg-white shadow-sm"
-            >
-              <h2 className="text-xl font-bold">{post.title}</h2>
-              <p className="text-sm text-gray-500 mb-2">
-                By {post.author?.name || "Unknown"} | Created on {post.created_at}
-              </p>
-              <p className="text-gray-700 mb-3 line-clamp-4">{post.content}</p>
-              <div className="flex gap-2 mb-3">
-                {post.tags?.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2 py-1 text-xs bg-gray-100 rounded-lg"
-                  >
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-              <div className="flex gap-3">
-                <button
-                  onClick={() => openModal(post)}
-                  className="px-3 py-1 bg-yellow-400 rounded hover:bg-yellow-500 text-white"
-                >
-                  Edit
-                </button>
-                <button
-                  onClick={() => handleDelete(post.id)}
-                  className="px-3 py-1 bg-red-500 rounded hover:bg-red-600 text-white"
-                >
-                  Delete
-                </button>
-              </div>
-            </div>
-          ))}
+      {error ? (
+        <div className="text-center py-10 text-gray-500 min-h-[300]">
+          <h2 className="text-2xl font-semibold mb-2">No Data Available</h2>
+          <p>The API connection failed, but you can still access the panel.</p>
         </div>
-      )}
-
-      {/* Deleted Posts */}
-      {activeTab === "deleted" && (
-        <div className="space-y-6">
-          {deletedPosts.length === 0 && (
-            <p className="text-gray-500">No deleted posts.</p>
+      ) : (
+        <>
+          {/* Create Post Form (only in Active tab) */}
+          {activeTab === "active" && (
+            <form
+              onSubmit={handleCreate}
+              className="p-6 bg-gray-50 rounded-xl shadow-md mb-8"
+            >
+              <h2 className="text-xl font-semibold mb-4">Create New Post</h2>
+              <input
+                value={createTitle}
+                onChange={(e) => setCreateTitle(e.target.value)}
+                placeholder="Title"
+                className="w-full p-2 border rounded mb-3"
+                required
+              />
+              <textarea
+                value={createContent}
+                onChange={(e) => setCreateContent(e.target.value)}
+                placeholder="Content"
+                className="w-full p-2 border rounded mb-"
+                required
+              />
+              <input
+                value={createTags}
+                onChange={(e) => setCreateTags(e.target.value)}
+                placeholder="Tags (comma separated)"
+                className="w-full p-2 border rounded mb-3"
+              />
+              <button
+                type="submit"
+                className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+              >
+                Create Post
+              </button>
+            </form>
           )}
-          {deletedPosts.map((post) => (
-            <div
-              key={post.id}
-              className="p-6 border rounded-lg bg-gray-100 shadow-sm"
-            >
-              <h2 className="text-xl font-bold text-gray-600">{post.title}</h2>
-              <p className="text-sm text-gray-500 mb-2">
-                By {post.author?.name || "Unknown"}
-              </p>
-              <div className="flex gap-3">
-                <button
-                  onClick={() => handleRestore(post.id)}
-                  className="px-3 py-1 bg-green-600 rounded hover:bg-green-700 text-white"
+
+          {/* Active Posts */}
+          {activeTab === "active" && (
+            <div className="space-y-6">
+              {posts.map((post) => (
+                <div
+                  key={post.id}
+                  className="p-6 border rounded-lg bg-white shadow-sm"
                 >
-                  Restore
-                </button>
-              </div>
+                  <h2 className="text-xl font-bold">{post.title}</h2>
+                  <p className="text-sm text-gray-500 mb-2">
+                    By {post.author?.name || "Unknown"} | Created on{" "}
+                    {post.created_at}
+                  </p>
+                  <p className="text-gray-700 mb-3 line-clamp-4">
+                    {post.content}
+                  </p>
+                  <div className="flex gap-2 mb-3">
+                    {post.tags?.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-1 text-xs bg-gray-100 rounded-lg"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex gap-3">
+                    <button
+                      onClick={() => openModal(post)}
+                      className="px-3 py-1 bg-yellow-400 rounded hover:bg-yellow-500 text-white"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      onClick={() => handleDelete(post.id)}
+                      className="px-3 py-1 bg-red-500 rounded hover:bg-red-600 text-white"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          )}
+
+          {/* Deleted Posts */}
+          {activeTab === "deleted" && (
+            <div className="space-y-6">
+              {deletedPosts.length === 0 && (
+                <p className="text-gray-500">No deleted posts.</p>
+              )}
+              {deletedPosts.map((post) => (
+                <div
+                  key={post.id}
+                  className="p-6 border rounded-lg bg-gray-100 shadow-sm"
+                >
+                  <h2 className="text-xl font-bold text-gray-600">
+                    {post.title}
+                  </h2>
+                  <p className="text-sm text-gray-500 mb-2">
+                    By {post.author?.name || "Unknown"}
+                  </p>
+                  <div className="flex gap-3">
+                    <button
+                      onClick={() => handleRestore(post.id)}
+                      className="px-3 py-1 bg-green-600 rounded hover:bg-green-700 text-white"
+                    >
+                      Restore
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </>
       )}
 
       {/* 🔹 Edit Modal */}
