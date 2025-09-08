@@ -1,24 +1,62 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 import { BlogPost } from "@/assets/types";
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const slug = params.slug;
+export default function BlogPostPage() {
+  const { slug } = useParams<{ slug: string }>();
+  const [data, setData] = useState<BlogPost | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
-  const response = await fetch(
-    `http://localhost:8000/api/v1/blog/show/${slug}`,
-    {
-      cache: "no-store",
-    }
-  );
+  useEffect(() => {
+    if (!slug) return;
 
-  if (!response.ok) {
-    return <div className="p-6 text-red-600">Post not found.</div>;
+    const fetchPost = async () => {
+      setLoading(true);
+      setError(false);
+
+      try {
+        const response = await fetch(
+          `http://localhost:8000/api/v1/blog/show/${slug}`,
+          {
+            cache: "no-store",
+          }
+        );
+
+        if (!response.ok) throw new Error("Post not found");
+
+        const json = await response.json();
+        setData(json);
+      } catch (err) {
+        console.error("Error fetching post:", err);
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPost();
+  }, [slug]);
+
+  if (loading) {
+    return (
+      <div className="p-6 text-center text-gray-500 min-h-[300px] mt-36">
+        <h2 className="text-2xl font-semibold mb-2">Loading...</h2>
+        <p>Please wait while we fetch the post.</p>
+      </div>
+    );
   }
 
-  const data: BlogPost = await response.json();
+  if (error || !data) {
+    return (
+      <div className="p-6 text-red-600 mt-10">
+        <h2 className="text-2xl font-bold mb-2">Post not found</h2>
+        <p>We couldn’t find the blog post you are looking for.</p>
+      </div>
+    );
+  }
 
   return (
     <section>
@@ -29,11 +67,9 @@ export default async function BlogPostPage({
             by {data.author?.name} | created on {data.created_at}
           </div>
           <div className="flex text-left text-sm text-gray-600 mb-3 ml-1">
-            <p className="py-1 pr-2 gap-2">Tags: </p>{data.tags?.map((tag) => (
-              <span
-                key={tag}
-                className="py-1 px-2 gap-2"
-              >
+            <p className="py-1 pr-2 gap-2">Tags: </p>
+            {data.tags?.map((tag) => (
+              <span key={tag} className="py-1 px-2 gap-2">
                 #{tag}
               </span>
             ))}
@@ -45,8 +81,7 @@ export default async function BlogPostPage({
         <div className="col-span-6 rounded-xl border-2 border-slate-400/10 bg-base-grey bg-[#F5F5F5] p-4">
           <div className="text-left leading-relaxed">
             {data.content
-              // normalize "\n" and "\\n"
-              .replace(/\\n/g, "\n")
+              ?.replace(/\\n/g, "\n")
               .split("\n")
               .map((paragraph, index) =>
                 paragraph.trim() ? (
