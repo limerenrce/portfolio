@@ -50,7 +50,7 @@ export default function Paradise() {
   // Fetch all active posts
   const fetchPosts = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/v1/blog/read", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/blog/read`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) throw new Error("API unavailable");
@@ -67,7 +67,7 @@ export default function Paradise() {
   // Fetch deleted posts
   const fetchDeletedPosts = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/v1/blog/deleted", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/blog/deleted`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) throw new Error("API unavailable");
@@ -85,7 +85,7 @@ export default function Paradise() {
   const handleCreate = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await fetch("http://localhost:8000/api/v1/blog/create", {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/blog/create`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -123,7 +123,7 @@ export default function Paradise() {
     if (!editId) return;
 
     try {
-      await fetch(`http://localhost:8000/api/v1/blog/update/${editId}`, {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/blog/update/${editId}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -159,7 +159,7 @@ export default function Paradise() {
   const handleDelete = async (id: number) => {
     if (!confirm("Are you sure?")) return;
     try {
-      await fetch(`http://localhost:8000/api/v1/blog/delete/${id}`, {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/blog/delete/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -173,7 +173,7 @@ export default function Paradise() {
   // Restore deleted post
   const handleRestore = async (id: number) => {
     try {
-      await fetch(`http://localhost:8000/api/v1/blog/restore/${id}`, {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/blog/restore/${id}`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -187,7 +187,7 @@ export default function Paradise() {
   // Logout
   const handleLogout = async () => {
     try {
-      await fetch("http://localhost:8000/api/v1/auth/logout", {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/auth/logout`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
       });

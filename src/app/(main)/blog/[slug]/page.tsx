@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { BlogPost } from "@/assets/types";
 
+// const APP_API_URL = import.meta.env.APP_API_PUBLIC_URL;
+
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
   const [data, setData] = useState<BlogPost | null>(null);
@@ -19,7 +21,7 @@ export default function BlogPostPage() {
 
       try {
         const response = await fetch(
-          `http://localhost:8000/api/v1/blog/show/${slug}`,
+          `${process.env.NEXT_PUBLIC_API_URL}/api/v1/blog/show/${slug}`,
           {
             cache: "no-store",
           }

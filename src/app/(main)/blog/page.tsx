@@ -21,7 +21,7 @@ export default function BlogPage() {
 
   const fetchPosts = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/v1/blog/read");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/blog/read`);
       if (!res.ok) throw new Error("API unavailable");
       const data = await res.json();
       setPosts(data.posts || []);
